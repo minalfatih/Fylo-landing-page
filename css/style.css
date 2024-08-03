@@ -1,0 +1,205 @@
+:root {
+  --Very-Dark-Blue: hsl(243, 87%, 12%);
+  --Desaturated-Blue: hsl(238, 22%, 44%);
+  --Bright-Blue: hsl(224, 93%, 58%);
+  --Moderate-Cyan: hsl(170, 45%, 43%);
+  --Light-Grayish-Blue: hsl(240, 75%, 98%);
+  --Light-Gray: hsl(0, 0%, 75%);
+}
+* {
+  box-sizing: border-box;
+}
+ul .nav-item .nav-link {
+  color: var(--Desaturated-Blue);
+}
+@media (max-width: 767px) {
+  header .navabr-brand {
+    width: 140px;
+  }
+  header .navabr-brand img {
+    width: 65%;
+  }
+}
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.landing {
+  margin-bottom: 150px;
+}
+.landing h1,
+.work-section h1 {
+  color: var(--Very-Dark-Blue);
+  font-size: 2.2rem;
+}
+@media (max-width: 576px) {
+  .landing {
+    margin-bottom: 50px;
+  }
+  .landing h1 {
+    font-size: 1.7rem;
+  }
+  .work-section h1,
+  .access-section h1 {
+    font-size: 1.5rem;
+  }
+}
+.landing p,
+.work-section p {
+  color: var(--Very-Dark-Blue);
+}
+form {
+  position: relative;
+}
+form input[type="text"] {
+  border: 1px solid var(--Desaturated-Blue);
+  border-radius: 4px;
+  color: var(--Very-Dark-Blue);
+  caret-color: var(--Desaturated-Blue);
+  outline: none;
+  width: 60%;
+  padding: 10px 25px;
+}
+.landing form input[type="text"].active {
+  border-color: #f35050;
+}
+form input[type="text"]::placeholder {
+  color: var(--Light-Gray);
+}
+form input[type="submit"] {
+  background-color: var(--Bright-Blue);
+  color: var(--Light-Grayish-Blue);
+  border-radius: 4px;
+  border: none;
+  width: 180px;
+  padding: 15px;
+  box-shadow: 0 2px 4px 0 var(--Light-Gray);
+  transition: 0.3s linear;
+}
+form input[type="submit"]:hover {
+  background-color: #6b9bff;
+}
+.access-section form input[type="text"],
+.access-section form input[type="submit"] {
+  box-shadow: 0 2px 4px 0 hsl(243deg 87% 12% / 10%);
+}
+.access-section form input[type="submit"] {
+  width: 210px;
+}
+.access-section form input[type="submit"].active {
+  margin-top: 25px;
+}
+form .error-mesg {
+  position: absolute;
+  display: none;
+}
+.landing form .error-mesg {
+  color: #f35050;
+  bottom: -45%;
+}
+.access-section form .error-mesg {
+  color: var(--Light-Grayish-Blue);
+  top: 35%;
+}
+form .error-mesg.active {
+  display: block;
+}
+@media (max-width: 990px) {
+  .landing form input {
+    width: 100%;
+  }
+}
+
+.work-section {
+  background-color: hsl(240deg 75% 98.43%);
+  position: relative;
+}
+.work-section::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: url(../images/bg-curve-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  .work-section::after {
+    top: -28px;
+    height: 60px;
+    background-size: contain;
+  }
+}
+.work-section .link a {
+  color: var(--Moderate-Cyan);
+}
+.testimonial {
+  width: 65%;
+  box-shadow: 0 0 15px 0 hsl(0deg 0% 75% / 40%);
+}
+@media (max-width: 767px) {
+  .testimonial {
+    width: 100%;
+  }
+}
+.testimonial .name img {
+  width: 45px;
+  border-radius: 50%;
+}
+.testimonial .name .info span {
+  font-size: 12px;
+}
+@media (max-width: 576px) {
+  .testimonial p {
+    font-size: 14px;
+  }
+  .testimonial .name img {
+    width: 35px;
+  }
+  .testimonial .name .info p {
+    font-size: 14px;
+  }
+}
+
+.access-section {
+  background-color: var(--Desaturated-Blue);
+}
+@media (max-width: 990px) {
+  .access-section form input {
+    width: 100%;
+  }
+}
+footer {
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Light-Grayish-Blue);
+}
+footer ul li a {
+  color: var(--Light-Grayish-Blue);
+  transition: 0.3s linear;
+}
+footer ul li a:hover {
+  color: var(--Desaturated-Blue);
+}
+footer ul:last-child li a {
+  border: 1px solid var(--Light-Grayish-Blue);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s linear;
+}
+footer ul:last-child li a:hover {
+  border-color: var(--Desaturated-Blue);
+}
+@media (max-width: 767px) {
+  footer .links {
+    flex-direction: column;
+  }
+  footer ul:last-child {
+    width: 100%;
+  }
+}
